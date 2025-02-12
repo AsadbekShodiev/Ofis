@@ -10,8 +10,6 @@
     </style>
 </head>
 <body>
-    <h2>Power BI Отчёт с автообновлением</h2>
-    
     <iframe id="powerbi-report" src="https://app.powerbi.com/reportEmbed?reportId=2917e627-80bb-43cb-ae78-c4e34074686c&autoAuth=true&ctid=ee1f841c-63a6-4777-bca6-f563e7f4b1b5"></iframe>
 
     <script>
@@ -22,8 +20,8 @@
             }
         }
 
-        // Обновлять каждые 40 секунд
-        setInterval(refreshReport, 40000);
+        // Обновлять каждые 200 секунд
+        setInterval(refreshReport, 1200000);
     </script>
 </body>
 </html>
