@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Auto Refresh</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        iframe { width: 100%; height: 90vh; border: none; }
+    </style>
+</head>
+<body>
+    <h2>Power BI Отчёт с автообновлением</h2>
+    
+    <iframe id="powerbi-report" src="https://app.powerbi.com/reportEmbed?reportId=2917e627-80bb-43cb-ae78-c4e34074686c&autoAuth=true&ctid=ee1f841c-63a6-4777-bca6-f563e7f4b1b5"></iframe>
+
+    <script>
+        function refreshReport() {
+            let iframe = document.getElementById("powerbi-report");
+            if (iframe) {
+                iframe.src = iframe.src; // Обновление отчёта
+            }
+        }
+
+        // Обновлять каждые 40 секунд
+        setInterval(refreshReport, 40000);
+    </script>
+</body>
+</html>
